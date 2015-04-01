@@ -129,9 +129,9 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="384dp"
+                android:layout_height="395dp"
                 android:layout_gravity="center"
-                android:layout_marginTop="70dp"
+                android:layout_marginTop="55dp"
                 android:layout_marginRight="10dp"
                 android:layout_marginLeft="10dp"
                 android:weightSum="1">
@@ -141,7 +141,7 @@
                     android:layout_height="277dp" android:id="@+id/map"
                     tools:context="com.socialbike.phuketsocialbike.MapsActivitycreat"
                     android:name="com.google.android.gms.maps.SupportMapFragment"
-                    android:layout_weight="0.79" />
+                    android:layout_weight="0.92" />
 
                 <Button
                     style="?android:attr/buttonStyleSmall"
@@ -154,12 +154,12 @@
             </LinearLayout>
 
             <Button
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/emergen_button"
                 android:id="@+id/emergency_btn"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="530dp" />
+                android:layout_marginTop="560dp" />
 
 
         </FrameLayout>
