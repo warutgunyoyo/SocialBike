@@ -69,38 +69,90 @@
             <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="218dp"
+                android:layout_height="148dp"
                 android:layout_gravity="top|center_horizontal"
                 android:layout_marginTop="55dp"
                 android:weightSum="1">
 
-                <TextView
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/name_trip"
+                        android:id="@+id/textView19"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"
+                        android:layout_marginTop="5dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/editText8"
+                        android:background="#ffffdd6a"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/route"
+                        android:id="@+id/textView20"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:textSize="15dp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:id="@+id/editText10"
+                        android:background="#ffffdd6a"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="384dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="70dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"
+                android:weightSum="1">
+
+                <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+                    android:layout_height="277dp" android:id="@+id/map"
+                    tools:context="com.socialbike.phuketsocialbike.MapsActivitycreat"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_weight="0.79" />
+
+                <Button
+                    style="?android:attr/buttonStyleSmall"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/New_trip"
-                    android:id="@+id/textView15"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="20dp" />
+                    android:text="New Button"
+                    android:id="@+id/button2"
+                    android:layout_gravity="right" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:id="@+id/editText8"
-                    android:background="#ffffdd6a"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="35dp"
-                    android:id="@+id/editText10"
-                    android:background="#ffffdd6a"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp" />
             </LinearLayout>
+
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,13 +160,6 @@
                 android:id="@+id/emergency_btn"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="530dp" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New Button"
-                android:id="@+id/button5"
-                android:layout_gravity="center" />
 
 
         </FrameLayout>

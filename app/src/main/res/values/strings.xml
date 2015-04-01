@@ -43,6 +43,8 @@
     //create trip
     <string name="create_trip">Create Trip</string>
     <string name="New_trip">New Trip</string>
+    <string name="name_trip">ชื่อทริป</string>
+    <string name="route">เส้นทาง</string>
 
     //Weather check
     <string name="weather_check">Weather</string>

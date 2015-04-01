@@ -82,7 +82,7 @@ public class Biker_BoardActivity extends ActionBarActivity {
         adapter = new NavDrawerListAdapter(getApplicationContext(),
                 navDrawerItems);
         mDrawerList.setAdapter(adapter);
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////
         //BTN Trip Introduce
         Button trip_introduce = (Button) findViewById(R.id.trip_introduce_btn);
         trip_introduce.setOnClickListener(new View.OnClickListener() {

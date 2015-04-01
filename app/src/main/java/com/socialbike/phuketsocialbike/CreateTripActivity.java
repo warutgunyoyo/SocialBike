@@ -89,14 +89,6 @@ public class CreateTripActivity extends ActionBarActivity {
                 startActivity(contractBtn);
             }
         });
-        Button button5 = (Button) findViewById(R.id.button5);
-        button5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent contractBtn = new Intent(CreateTripActivity.this,MapsActivitycreat.class);
-                startActivity(contractBtn);
-            }
-        });
     }
 
     /**Slide manu **/
