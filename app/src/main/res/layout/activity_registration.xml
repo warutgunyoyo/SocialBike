@@ -44,7 +44,7 @@
         android:layout_weight="1"
         android:layout_marginTop="20dp"
         android:layout_row="0"
-        android:layout_column="1"
+        android:layout_column="2"
         android:background="#ffffdd6a" />
 
         <TextView
@@ -62,7 +62,7 @@
             android:layout_height="40dp"
             android:id="@+id/editText4"
             android:layout_row="1"
-            android:layout_column="1"
+            android:layout_column="2"
             android:layout_marginTop="20dp"
             android:background="#ffffdd6a" />
 
@@ -81,7 +81,7 @@
             android:layout_height="40dp"
             android:id="@+id/editText5"
             android:layout_row="2"
-            android:layout_column="1"
+            android:layout_column="2"
             android:layout_marginTop="20dp"
             android:background="#ffffdd6a" />
 
@@ -100,7 +100,7 @@
             android:layout_height="40dp"
             android:id="@+id/editText6"
             android:layout_row="3"
-            android:layout_column="1"
+            android:layout_column="2"
             android:layout_marginTop="20dp"
             android:background="#ffffdd6a" />
 
@@ -114,25 +114,25 @@
             android:layout_column="0"
             android:layout_marginTop="30dp" />
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/female_radio"
-            android:id="@+id/radioButton"
+        <RadioGroup
+            android:layout_width="117dp"
+            android:layout_height="83dp"
             android:layout_row="4"
-            android:layout_column="1"
-            android:checked="false"
-            android:layout_marginTop="20dp"
-            android:focusable="false"/>
+            android:layout_column="2"
+            android:layout_marginTop="20dp">
 
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/male_radio"
-            android:id="@+id/radioButton2"
-            android:layout_row="5"
-            android:layout_column="1"
-            android:checked="false" />
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male_radio"
+                android:id="@+id/radioButton" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female_radio"
+                android:id="@+id/radioButton2" />
+        </RadioGroup>
 
         <TextView
             android:layout_width="wrap_content"
@@ -151,7 +151,7 @@
             android:ems="10"
             android:id="@+id/editText7"
             android:layout_row="6"
-            android:layout_column="1"
+            android:layout_column="2"
             android:layout_marginTop="20dp"
             android:background="#ffffdd6a" />
 
@@ -161,7 +161,7 @@
             android:text="@string/submit_button"
             android:id="@+id/button"
             android:layout_row="9"
-            android:layout_column="1"
+            android:layout_column="2"
             android:layout_gravity="right" />
 
     </GridLayout>
