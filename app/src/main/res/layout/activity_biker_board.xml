@@ -40,7 +40,13 @@
                     android:layout_height="45dp"
                     android:background="@drawable/bike1"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginLeft="80dp" />
+                    android:layout_marginLeft="40dp" />
+
+                <Button
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/pickImage_btn"
+                    android:background="@drawable/pickimg" />
 
                 <Button
                     android:id="@+id/picture_btn"
@@ -83,34 +89,36 @@
                             android:layout_height="match_parent"
                             android:layout_gravity="top|center_horizontal"
                             android:layout_marginTop="10dp"
-                            android:weightSum="1"
                             android:background="#ffffdd6a"
                             android:layout_marginLeft="15dp"
                             android:layout_marginRight="15dp">
 
                             <EditText
                                 android:layout_width="match_parent"
-                                android:layout_height="100dp"
+                                android:layout_height="match_parent"
                                 android:id="@+id/board_editText"
-                                android:layout_weight="0.16"
                                 android:textColor="@android:color/black"
                                 android:background="#ffffdd6a"
-                                android:layout_marginLeft="5dp" />
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp" />
 
-                            <ImageView
+                            <LinearLayout
+                                android:orientation="vertical"
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:id="@+id/imgBoard_imgView"
-                                android:layout_gravity="center_horizontal"
-                                android:layout_weight="0.16"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:visibility="invisible" />
+                                android:layout_height="match_parent">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/imgBoard_imgView"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="10dp" />
+                            </LinearLayout>
 
                             <Button
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
+                                android:layout_width="60dp"
+                                android:layout_height="match_parent"
                                 android:text="@string/post_btn"
                                 android:id="@+id/button4"
                                 android:layout_gravity="right"
@@ -118,12 +126,12 @@
                                 android:layout_marginTop="5dp"
                                 android:layout_marginBottom="10dp" />
 
-                            <Gallery
+                            <!--<Gallery
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:id="@+id/gallery"
                                 android:layout_gravity="right"
-                                android:layout_weight="0.16" />
+                                android:layout_weight="0.16" />-->
                         </LinearLayout>
                         </ScrollView>
 

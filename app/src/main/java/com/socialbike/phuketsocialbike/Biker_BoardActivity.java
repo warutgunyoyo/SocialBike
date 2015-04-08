@@ -42,7 +42,9 @@ public class Biker_BoardActivity extends ActionBarActivity {
     private ListView mDrawerList;
 
     private ImageView img;
+    private ImageView img2;
     private int RESULT_LOAD_IMAGE =1;
+    private int RESULT_LOAD_IMAGE2 =1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -104,22 +106,47 @@ public class Biker_BoardActivity extends ActionBarActivity {
             }
         });
 
-        //****IMAGE Gallery
+        //****Take picture
         Button picture = (Button)findViewById(R.id.picture_btn);
         ImageView img = (ImageView) findViewById(R.id.imgBoard_imgView);
         picture.setOnClickListener(new View.OnClickListener() {
+                                       @Override
+                                       public void onClick(View v) {
+                                           Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                                           startActivityForResult(Intent.createChooser(takePicture,
+                                                   "Take Picture"), RESULT_LOAD_IMAGE2);
+                                       }
+                                   });
+
+
+        //****IMAGE Gallery
+        Button pickImg = (Button)findViewById(R.id.pickImage_btn);
+        ImageView img2 = (ImageView) findViewById(R.id.imgBoard_imgView);
+        pickImg.setOnClickListener(new View.OnClickListener() {
             public void onClick(View arg0) {
 
                 // in onCreate or any event where your want the user to
                 // select a file
-                Intent intent = new Intent();
-                intent.setType("image/*");
-                intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent,
+//                Intent intent = new Intent();
+//                intent.setType("image");
+                Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                pickPhoto.setAction(Intent.ACTION_PICK);
+                startActivityForResult(Intent.createChooser(pickPhoto,
                         "Select Picture"), RESULT_LOAD_IMAGE);
 
+
+
+
+               /* Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(takePicture, 0);//zero can be replaced with any action code*/
+
+                /*Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                        android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(pickPhoto , 1);//one can be replaced with any action code*/
             }
         });
+
 
     }
 
@@ -137,8 +164,29 @@ public class Biker_BoardActivity extends ActionBarActivity {
                 ImageView imageView = (ImageView) findViewById(R.id.imgBoard_imgView);
                 imageView.setImageBitmap(BitmapFactory.decodeFile(picturePath));
 
+            }else  if (requestCode == RESULT_LOAD_IMAGE2 && resultCode == RESULT_OK && null != data)
+            {
+                Uri selectedImage = data.getData();
+                ImageView imageView = (ImageView) findViewById(R.id.imgBoard_imgView);
             }
         }
+
+      /*  super.onActivityResult(requestCode, resultCode, data);
+        switch(requestCode) {
+            case 0:
+                if(resultCode == RESULT_OK){
+                    Uri selectedImage = data.getData();
+                    img.setImageURI(selectedImage);
+                }
+
+                break;
+            case 1:
+                if(requestCode == RESULT_LOAD_IMAGE && resultCode == RESULT_OK && null != data){
+                    Uri selectedImage = data.getData();
+                    img.setImageURI(selectedImage);
+                }
+                break;
+        }*/
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
